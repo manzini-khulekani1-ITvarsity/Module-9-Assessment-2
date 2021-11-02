@@ -17,7 +17,7 @@
                 {name: "Istanbul", utcOffset: 3, flag: "Turkey.png"},
                 {name: "New York City", utcOffset: -5, flag: "United-States-of-America.png"},
                 {name: "Tokyo", utcOffset: 9, flag: "Japan.png"},
-                {name: "Moscow", utcOffset: 9, flag: "Russia.png"},
+                {name: "Moscow", utcOffset: 3, flag: "Russia.png"},
                 {name: "Rio De Jeneiro", utcOffset: -3, flag: "Brazil.png"},
                 {name: "Sidney", utcOffset: 11, flag: "Australia.png"},
                 {name: "Vancouver", utcOffset: -8, flag: "Canada.png"},
@@ -61,8 +61,7 @@
                       <th class="col1"</th>
                       <th class="col2"</th>
                       <th></th>
-                    </tr>
-             `;
+                    </tr>`;
                 
                 for(a = 0; a < cities.length; a++){
                     output += `
@@ -70,8 +69,7 @@
                         <td><img src="img/${cities[a].flag}"/></td>
                           <td>${cities[a].name}</td>
                           <td>${getCurrentTime(cities[a].utcOffset)}</td>
-                        </tr>
-                    `;      
+                        </tr>`;      
                 }
                 output += `</table>`;
                 document.getElementById("output").innerHTML = output;
